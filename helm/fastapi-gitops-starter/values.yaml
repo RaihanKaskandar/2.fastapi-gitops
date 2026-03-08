@@ -8,7 +8,7 @@ image:
   repository: ghcr.io/qcdis/fastapi-gitops-starter
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v0.4"
+  tag: latest
 
 registry:
   createImagePullSecret: true
@@ -96,10 +96,10 @@ readinessProbe:
   failureThreshold: 3
 
 autoscaling:
-  enabled: false
-  minReplicas: 2
-  maxReplicas: 10
-  targetCPUUtilizationPercentage: 80
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 10
   targetMemoryUtilizationPercentage: 80
 
 # Additional volumes on the output Deployment definition.
