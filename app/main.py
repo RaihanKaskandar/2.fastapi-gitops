@@ -61,5 +61,5 @@ async def create_item(name: str, description: str):
 
 
 if __name__ == "__main__":
-    print("Starting FastAPI GitOps Starter...")
+    print("Starting FastAPI GitOps Starter....")
     uvicorn.run(app, host="0.0.0.0", port=8000)
